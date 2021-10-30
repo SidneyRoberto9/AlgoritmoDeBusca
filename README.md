@@ -1,4 +1,4 @@
 # AlgoritmoDeBusca
 
-Codigo feito na Cadeira de Estrutura de dados, Projeto final de cadeira.<br></br>
-Projeto Realizado com o Eclipse e java 15
+Projeto Feito para Estrutura de Dados II.<br />
+Utilizando as tecnologias Eclipse e Java 16.
