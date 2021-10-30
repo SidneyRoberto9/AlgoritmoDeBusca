@@ -1,27 +1,13 @@
 package Principal;
 
-public class Main extends Busca {
+public class Main extends Core {
 	public static void main(String[] args) {
 		int vetor[] = new int[tamanho];
-		int numero_aleatorio;
 		int numero_pesquisado = 40;
-		int igual = 0;
 		
 		//Vetor aleatorios de 1 ate 50 com valores unicos
-		for(int x = 0; x < tamanho; x++) {
-			numero_aleatorio = (int)(Math.random() * tamanho) + 1;
-			
-			for(int y = 0; y < tamanho; y++) {
-				if(numero_aleatorio == vetor[y])
-					igual++;
-			}
-			if(igual == 0)
-				vetor[x] = numero_aleatorio;
-			else {
-				igual = 0;
-				x--;
-			}
-		}  
+		vetor_aleatorio(vetor);
+		
 		//Criando um vetor organizado pelo Bubble Sort
 		int vetor_bubble[] = vetor.clone();
 		bubble_sort(vetor_bubble);

@@ -1,7 +1,26 @@
 package Principal;
 
-public class Busca {
+public class Core {
 	protected static int tamanho = 50;
+	
+	public static void vetor_aleatorio(int v[]) {
+		int numero_aleatorio;
+		int igual = 0;
+		
+		for(int x = 0; x < tamanho; x++) {
+			numero_aleatorio = (int)(Math.random() * tamanho) + 1;
+			for(int y = 0; y < tamanho; y++) {
+				if(numero_aleatorio == v[y])
+					igual++;
+			}
+			if(igual == 0)
+				v[x] = numero_aleatorio;
+			else {
+				igual = 0;
+				x--;
+			}
+		}  
+	}
 	
 	public static void bubble_sort(int v[]) {
 		// for utilizado para controlar a quantidade de vezes que o vetor será ordenado.
