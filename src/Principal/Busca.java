@@ -1,6 +1,7 @@
 package Principal;
 
 public class Busca extends Core{
+	
 	public int Busca_Linear(int v[], int numero_pesquisado) {
 		int interacoes_Linear = 1;
 		

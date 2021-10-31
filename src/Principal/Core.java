@@ -1,6 +1,7 @@
 package Principal;
 
 public class Core {
+	
 	protected static int tamanho = 50;
 	
 	public static void vetor_aleatorio(int v[]) {
@@ -33,15 +34,5 @@ public class Core {
 	    		a = 0;
 	    	}
 	    }
-	}
-	
-	public static void printInteracoesSort(int v[], int numero_pesquisado) {
-		Busca busca = new Busca();
-		
-		System.out.format("\nBuscando pelo Numero %d:\n", numero_pesquisado);
-		System.out.format("Busca Linear - %d interações.\n", busca.Busca_Linear(v, numero_pesquisado));
-		System.out.format("Busca Binaria - %d interações.\n", busca.Busca_Binaria(v, numero_pesquisado));
-		System.out.format("Jump Search - %d interações.\n", busca.Busca_Jump(v, numero_pesquisado));
-		System.out.format("Fibonacci Search - %d interações.\n", busca.Busca_Fibbonacci(v, numero_pesquisado));
 	}
 }
