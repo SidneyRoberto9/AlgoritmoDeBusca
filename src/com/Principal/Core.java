@@ -1,4 +1,4 @@
-package Principal;
+package com.Principal;
 
 public class Core {
 	

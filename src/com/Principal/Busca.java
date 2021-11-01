@@ -1,4 +1,4 @@
-package Principal;
+package com.Principal;
 
 public class Busca extends Core{
 	
@@ -52,7 +52,7 @@ public class Busca extends Core{
 	public int Busca_Fibbonacci(int v[], int numero_pesquisado){
 		// iniciando a sequencia de fibbonacci
 		int fib2 = 0, fib1 = 1 ,fibM = fib2 + fib1, interacoes_fib = 1;
-		// limita o tamanho na busca para não recebemos um "Index out range"
+		// limita o tamanho na busca para nï¿½o recebemos um "Index out range"
 		int offset = -1;
 		//fibM armazerna o menor numero de fibbonacci, maior ou igual ao tamanho da lista
 		while (fibM < tamanho) {
@@ -62,7 +62,7 @@ public class Busca extends Core{
 		}
 		//Busca o elemento utilizando a sequencia de fibbonacci
 		while (fibM > 1) {
-			// valida se a posição da array é valida, verificando se esta dentro dela
+			// valida se a posiï¿½ï¿½o da array ï¿½ valida, verificando se esta dentro dela
 			int valid = offset + fib2;
 			if(!(valid <= (tamanho - 1)))
 			valid = tamanho - 1;
@@ -86,7 +86,7 @@ public class Busca extends Core{
 				break;
 			interacoes_fib++;
 		}
-		//Comparando a ultima posição da lista com o numero_procurado
+		//Comparando a ultima posiï¿½ï¿½o da lista com o numero_procurado
 		if (fib1 == 1 && v[tamanho-1] == numero_pesquisado)interacoes_fib++;
 		return interacoes_fib;
 	}
