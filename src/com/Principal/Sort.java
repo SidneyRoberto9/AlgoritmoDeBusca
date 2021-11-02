@@ -2,18 +2,18 @@ package com.Principal;
 
 public class Sort extends Core{
 	
-	public long Bubble_Sort(int v[], int mode) {
+	public long Bubble_Sort(int[] v, int mode) {
 		long startTime = System.nanoTime();
 		
 		int interacoes = 1;
-		// for utilizado para controlar a quantidade de vezes que o vetor ser� ordenado.
+		// for utilizado para controlar a quantidade de vezes que o vetor sera ordenado.
 		for(int i = tamanho; i >= 1; i--) {
             // for utilizado para ordenar o vetor.
             interacoes++;
             for (int j = 1; j < i; j++) {
                 interacoes++;
-                // Se o valor da posi��o atual do vetor for maior que o proximo valor,
-                //ent�o troca os valores de lugar no vetor
+                // Se o valor da posicao atual do vetor for maior que o proximo valor,
+                //entao troca os valores de lugar no vetor
                 if (v[j - 1] > v[j]) {
                     int aux = v[j];
                     v[j] = v[j - 1];
@@ -28,7 +28,7 @@ public class Sort extends Core{
 			return System.nanoTime() - startTime;
 	}
 
-	public long Insertion_Sort(int v[],int mode) {
+	public long Insertion_Sort(int[] v,int mode) {
 		long startTime = System.nanoTime();
 		int interacoes = 1;
 		// aponta para a posicao de index [1] do vetor e varre a lista apartir dele
@@ -56,10 +56,10 @@ public class Sort extends Core{
 			return System.nanoTime() - startTime;
 	}
 
-	public long Selection_Sort(int v[], int mode) {
+	public long Selection_Sort(int[] v, int mode) {
 		long startTime = System.nanoTime();
 		int interacoes = 1;
-		// definindo a movimenta��o da raiz pelos index 0 ah tamanho do vetor - 1
+		// definindo a movimentacaoo da raiz pelos index 0 ah tamanho do vetor - 1
         for (int i = 0; i < tamanho-1; i++){
             // Procurando o menor elemnto do vetor desordenado
             int menor = i;
@@ -84,10 +84,10 @@ public class Sort extends Core{
 			return System.nanoTime() - startTime;
 	}
 	
-	public long Shell_Sort(int v[], int mode) {
+	public long Shell_Sort(int[] v, int mode) {
 		long startTime = System.nanoTime();
 		int interacoes = 1;
-		// Come�ando com a metade do valor total e tradando como um bloco
+		// Comecando com a metade do valor total e tradando como um bloco
 		// para ficar reduzindo gradativamente
 		for (int gap = tamanho/2; gap > 0; gap /= 2){
 			interacoes++;
@@ -105,7 +105,7 @@ public class Sort extends Core{
                 	v[j] = v[j - gap];
                 	interacoes++;
                 }   
-                // assim colocando o temp que seria o valor pego anterior mente na posi��o correta
+                // assim colocando o temp que seria o valor pego anterior mente na posicao correta
                 v[j] = temp;
             }
         }
@@ -115,15 +115,15 @@ public class Sort extends Core{
 			return System.nanoTime() - startTime;
 	}
 	
-	public long Merge(int v[], int inicio, int metade, int fim) {
+	public long Merge(int[] v, int inicio, int metade, int fim) {
 		int interacoes = 1;
 		 // Coloca o tamanho das 2 sublsitas
         int n1 = metade - inicio + 1;
         int n2 = fim - metade;
 
         //Criando 2 listas temporarias
-        int L[] = new int[n1];
-        int R[] = new int[n2];
+        int[] L = new int[n1];
+        int[] R = new int[n2];
 
         //Copiando os conteudos para elas
         for(int i = 0; i < n1; ++i) {
@@ -168,7 +168,7 @@ public class Sort extends Core{
         return interacoes;
 	}
 	
-	public long Merge_Sort(int v[], int inicio, int fim, int mode) {
+	public long Merge_Sort(int[] v, int inicio, int fim, int mode) {
 		long startTime = System.nanoTime(), variavel = 0;
 		if (inicio < fim) {
             // Ache o ponto ao meio
@@ -187,7 +187,7 @@ public class Sort extends Core{
 			return (System.nanoTime() - startTime);
 	}
 	
-	public long Heap_Sort(int v[], int tam, int mode) {
+	public long Heap_Sort(int[] v, int tam, int mode) {
 		long startTime = System.nanoTime(), variavel = 0;
 		int interacoes = 1;
 		//Crie o Heap
@@ -211,8 +211,8 @@ public class Sort extends Core{
 			return System.nanoTime() - startTime;
 	}
 	
-	public long heap_arvore(int v[], int tam, int inic){
-		long startTime = System.nanoTime() , variavel = 0;
+	public long heap_arvore(int[] v, int tam, int inic){
+		long variavel = 0;
 		int interacoes = 1;
         int largest = inic; // iniciando a maior raiz
         int l = 2 * inic + 1; // esquerda = 2 * i + 1
