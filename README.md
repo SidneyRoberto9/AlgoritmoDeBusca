@@ -2,7 +2,7 @@
 
 Projeto Feito para Estrutura de Dados II.<br />
 Utilizando as tecnologias IntelliJ e Java 17.<br />
-Para Um melhor entendimento do Projeto Por Favor Abir-lo.
+Para um melhor entendimento do Projeto Por Favor Abir-lo.
 
 # Estrutura Inical do Projeto
 
